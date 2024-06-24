@@ -43,6 +43,19 @@ RUN pip install --no-cache numpy==1.23.5
 
 RUN pip install supervision
 
+RUN apt-get update && apt-get install -y \
+    libxkbcommon-x11-0 \
+    libxrender1 \
+    libfontconfig1 \
+    libxext6 \
+    libx11-xcb1 \
+    xvfb
+
+# x11Debug
+RUN apt-get install -y x11-apps
+
+# Set environment variable for Qt
+ENV QT_QPA_PLATFORM=xcb
 # Remove exported models
 RUN rm -rf tmp
 

@@ -1,12 +1,12 @@
 # YOLOv8 configuration file
 
 # Define paths to your dataset
-path: /workspaces/transect_line_yolo (copy)/data_set
+path: /workspaces/transect_line_yolo/data_set
 
 # Define the dataset structure
-train: /workspaces/transect_line_yolo (copy)/data_set/train
-val: /workspaces/transect_line_yolo (copy)/data_set/val
-test: /workspaces/transect_line_yolo (copy)/data_set/test
+train: /workspaces/transect_line_yolo/data_set/train
+val: /workspaces/transect_line_yolo/data_set/val
+test: /workspaces/transect_line_yolo/data_set/test
 # Classes
 names: 
   0: transect line

@@ -14,7 +14,20 @@
 				"ms-python.python"
 			]
 		}
-	}
+	},
+	"runArgs": [
+        // "-e", "DISPLAY=:99",
+        // "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+		"--env=DISPLAY=${env:DISPLAY}",
+		// "--env=DISPLAY=:0.0",
+		"--env=QT_X11_NO_MITSHM=1",
+		"--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw",
+		"--env=XAUTHORITY=${env:XAUTH}",
+		"--volume=${env:XAUTH}:${env:XAUTH}",
+		"--net=host",
+		"--privileged",
+    ],
+	// "postCreateCommand": "Xvfb :99 -screen 0 1920x1080x16 &"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
