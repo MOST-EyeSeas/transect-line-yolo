@@ -1,0 +1,39 @@
+# YOLOv8 configuration file
+
+# Define paths to your dataset
+path: /workspaces/transect_line_yolo (copy)/data_set
+
+# Define the dataset structure
+train: /workspaces/transect_line_yolo (copy)/data_set/train
+val: /workspaces/transect_line_yolo (copy)/data_set/val
+test: /workspaces/transect_line_yolo (copy)/data_set/test
+# Classes
+names: 
+  0: transect line
+
+# Optional: Additional training parameters (you can customize these based on your needs)
+epochs: 100
+batch_size: 16
+img_size: 640
+learning_rate: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+optimizer: 'SGD'  # Options: 'SGD', 'Adam', 'AdamW'
+device: 0  # Use 'cpu' or specify GPU device (e.g., 0 or 0,1 for multi-GPU)
+workers: 8
+project: /transect_line_yolo  # Project directory
+name: yolov8_training  # Experiment name
+save_period: 10  # Save checkpoint every X epochs
+
+augmentations:
+  fliplr: 0.5         # Horizontal flip with 50% probability
+  mosaic: 1.0         # Mosaic augmentation with 100% probability
+  hsv_h: 0.015        # Hue augmentation with ±1.5% probability
+  hsv_s: 0.7          # Saturation augmentation with ±70% probability
+  hsv_v: 0.4          # Value augmentation with ±40% probability
+  degrees: 10.0       # Image rotation with ±10 degrees
+  translate: 0.1      # Image translation with ±10% probability
+  scale: 0.5          # Image scaling with ±50% probability
+  shear: 2.0          # Image shear with ±2 degrees
+  perspective: 0.0    # Perspective transformation
+  mixup: 0.2          # MixUp augmentation with 20% probability
