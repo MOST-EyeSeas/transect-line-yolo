@@ -30,7 +30,12 @@
 - Make sure your system has a GPU with compatible driver+CUDA
 - Some other prominent libraries are ultralitics, pytorch and pillow.
 - You can also run in using the included Dockerfile, note you must modify the paths in the config.yaml file (lines 4-9) to generate output data.
-
+```bash
+  path: /workspaces/transect_line_yolo/data_set
+  train: /workspaces/transect_line_yolo/data_set/train
+  val: /workspaces/transect_line_yolo/data_set/val
+  test: /workspaces/transect_line_yolo/data_set/test
+```
 Input data must be added either split into train/test/val folders, you can also use the included dataset class to split and organise raw data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -40,6 +45,7 @@ Input data must be added either split into train/test/val folders, you can also 
 Using the Dataset class
 Add a folder named "raw_data", within should be a folder "images" including all images and "bounding_box" including bounding boxes data.
 Folder structure:
+```bash
 <br>|-- data_raw
 <br>|  |-- images
 <br>|  |  |-- image1.jpg
@@ -49,6 +55,7 @@ Folder structure:
 <br>|  |  |-- image1.txt
 <br>|  |  |-- image2.txt
 <br>|  |  |-- ...
+```
 <br>Next - initiate the Dataset class use save_data method. Voilla!
 
 Training
