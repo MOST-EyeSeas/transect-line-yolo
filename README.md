@@ -40,16 +40,16 @@ Input data must be added either split into train/test/val folders, you can also 
 Using the Dataset class
 Add a folder named "raw_data", within should be a folder "images" including all images and "bounding_box" including bounding boxes data.
 Folder structure:
-|-- data_raw
-|   |-- images
-|   |   |-- image1.jpg
-|   |   |-- image2.jpg
-|   |   `-- ...
-|   `-- bounding_box
-|       |-- image1.txt
-|       |-- image2.txt
-|       `-- ...
-Next - initiate the Dataset class use save_data method. Voilla!
+<br>|-- data_raw
+<br>|  |-- images
+<br>|  |  |-- image1.jpg
+<br>|  |  |-- image2.jpg
+<br>|  |  |-- ...
+<br>|  |-- bounding_box
+<br>|  |  |-- image1.txt
+<br>|  |  |-- image2.txt
+<br>|  |  |-- ...
+<br>Next - initiate the Dataset class use save_data method. Voilla!
 
 Training
 Run the training lines in the main.py file.
